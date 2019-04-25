@@ -205,9 +205,12 @@ class ListOfPizzas extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                SizedBox(
-                  height: 180,
-                  child: Image.asset(image),
+                Hero(
+                  tag: 'PIZZAIMAGE$image',
+                  child: SizedBox(
+                    height: 180,
+                    child: Image.asset(image),
+                  ),
                 ),
                 SizedBox(
                   height: 30,
